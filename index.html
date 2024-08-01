@@ -18,25 +18,27 @@
     </header>
     <main>
       <section class="section-price">
-        <div class="price">
-          <p><span>100k</span>Pageviews</p>
-          <div>$<span>16.00</span>/month</div>
+        <div class="price-heading">
+          <p class="pageviews"><span>100k</span>Pageviews</p>
+          <div class="price-per-month">$<span>16.00</span>/month</div>
         </div>
         <input type="range" name="" id="">
         <div class="toggle-container">
-          <label for="billing">Monthly Billing</label>
-          <input type="checkbox" name="billing" id="billing" class="billing-toggle">
-          <div class="slider"></div>
-          <label for="billing">Yearly Billing</label> <div>25% discount</div>
+          <span>Monthly Billing</span>
+          <label for="toggle" class="toggle">
+            <input type="checkbox" name="toggle" id="toggle" class="billing-toggle">
+            <span class="slider"></span>
+          </label>
+          <span>Yearly Billing</span><span class="discount-badge">25% discount</span>
         </div>
       </section>
       <section class="section-info">
-        <ul>
-          <li>Unlimited websites</li>
-          <li>100% data ownership</li>
-          <li>Email reports</li>
+        <ul class="info-list">
+          <li><img src="./images/icon-check.svg" alt="icon-check">Unlimited websites</li>
+          <li><img src="./images/icon-check.svg" alt="icon-check">100% data ownership</li>
+          <li><img src="./images/icon-check.svg" alt="icon-check">Email reports</li>
         </ul>
-        <button type="button">Start my trial</button>
+        <button type="button" class="trial-btn">Start my trial</button>
       </section>
     </main>
     

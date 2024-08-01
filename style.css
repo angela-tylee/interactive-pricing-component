@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+  v2.0 | 20110126
+  License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -75,7 +75,12 @@ body {
 }
 
 header {
+  padding-block: 38px;
   text-align: center;
+  background-image: url(./images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 header h1 {
   font-size: 28px;
@@ -84,9 +89,11 @@ header h1 {
 }
 header p {
   font-size: 15px;
+  margin-top: 12px;
 }
 
 main {
+  width: 540px;
   margin-top: 54px;
   border-radius: 8px;
   box-shadow: 0px 20px 30px -5px hsla(230, 29%, 61%, 0.1521);
@@ -94,37 +101,118 @@ main {
 }
 
 .section-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   padding: 40px 48px;
   border-bottom: 1px solid #CFD8EF;
 }
-.section-price input.billing-toggle {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+.section-price .price-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.section-price .price-heading .pageviews {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.section-price .price-heading .price-per-month {
+  font-size: 16px;
+  font-weight: 600;
+}
+.section-price .price-heading .price-per-month span {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #293356;
+}
+.section-price input {
+  width: 100%;
+  margin-block: 24px 40px;
+}
+.section-price .toggle-container {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 350;
+  margin-right: 8px;
+}
+.section-price .toggle-container .toggle {
+  display: block;
+  width: 43px;
+  height: 22px;
+  position: relative;
+  margin-inline: 16px;
+}
+.section-price .toggle-container input.billing-toggle {
+  opacity: none;
   width: 0;
   height: 0;
 }
-.section-price .slider {
-  width: 43px;
-  height: 22px;
+.section-price .toggle-container .slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   border-radius: 15px;
-  padding: 4px;
   background-color: #CFD8EF;
-  position: relative;
 }
-.section-price .slider::after {
+.section-price .toggle-container .slider::after {
   content: "";
   width: 14px;
   height: 14px;
+  top: 4px;
+  left: 4px;
   border-radius: 50%;
   background-color: #FFFFFF;
   position: absolute;
   left: 4px;
 }
-.section-price input.billing-toggle:checked + .slider::after {
+.section-price .toggle-container input.billing-toggle:checked + .slider::after {
+  left: initial;
   right: 4px;
+}
+.section-price .toggle-container .discount-badge {
+  background-color: #FEEDE8;
+  color: #FF8D68;
+  padding: 2px 6px;
+  margin-inline: 9px;
+  border-radius: 9.5px;
+  font-size: 10px;
+  font-weight: 800;
 }
 
 .section-info {
   padding: 32px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-info .info-list {
+  font-size: 12px;
+  font-weight: 350;
+}
+.section-info .info-list li {
+  margin-block: 10px;
+}
+.section-info .info-list img {
+  margin-right: 16px;
+}
+.section-info .trial-btn {
+  background-color: #293356;
+  color: #BECDFF;
+  border-radius: 20.5px;
+  padding: 12px 46px;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+footer {
+  margin-top: 24px;
+  font-size: 12px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
